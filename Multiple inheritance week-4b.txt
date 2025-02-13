@@ -1,0 +1,28 @@
+class Animal{
+   void eat()
+   {
+     System.out.println("It is eating");
+   }
+}
+class Dog extends Animal
+{
+   void bark()
+   {
+     System.out.println("Dog is barking");
+   }
+}
+class BabyDog extends Dog{
+   void noise()
+   {
+      System.out.println("Baby Dog is making noise.");
+   }
+}
+class MIex{
+  public static void main(String[] args)
+  {
+    BabyDog bd=new BabyDog();
+      bd.noise();
+      bd.bark();
+      bd.eat();
+  }
+}
