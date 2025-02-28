@@ -1,0 +1,43 @@
+interface BankAccount
+{
+  public void deposit(double amount);
+  public void withdraw(double amount);
+  double getbalance();
+}
+class SimpleAccount implements BankAccount
+{
+   private double balance;
+   SimpleAccount(double initialbalance)
+   {
+     this.balance=initialbalance;
+   }
+  public void deposit(double amount)
+  {
+    balance+=amount;
+  }
+  public void withdraw(double amount)
+  {
+    if(amount<=balance)
+    {
+      balance-=amount;
+    }
+    else
+    {
+      System.out.println("Insufficient balance");
+    }
+  }
+  public double getbalance()
+  {
+    return balance;
+  }
+}
+public class Interfaceex
+{
+  public static void main(String[] args)
+  {
+    SimpleAccount account=new SimpleAccount(5000.0);
+    account.deposit(1500.0);
+    account.withdraw(2000.0);
+    System.out.println("Balance:"+account.getbalance());
+  }
+}
