@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class SBex{
+ public static void main(String[] args)
+ {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter a string:");
+   StringBuffer sb=new StringBuffer("Excuse me");
+    System.out.println("Choose the correct option");
+    System.out.println("1.Delete the substring");
+    System.out.println("2.Remove a character");
+    System.out.println("Exit");
+    System.out.println("Enter the choice to perform:");
+    int choice=sc.nextInt();
+    switch(choice){
+     case 1:
+      System.out.println("Entered string:"+sb);
+      System.out.println("Enter the start and end indexes to delete");
+      int start=sc.nextInt();
+      int end=sc.nextInt();
+      if(start>=0&&end<=sb.length()&&start<end)
+      {
+         sb.delete(start,end);
+         System.out.println("After delete():"+sb);
+      }
+      else
+      {
+        System.out.println("Index is out of range.");
+      }
+     break;
+    case 2:
+     System.out.println("The string is:"+sb);
+     int index=sc.nextInt();
+     System.out.println("Enter the index of character to remove");
+     if(index>=0&&index<=sb.length())
+     {
+       sb.deleteCharAt(index);
+       System.out.println("After deleteCharAt():"+sb);
+     }
+     else{
+      System.out.println("Invalid Index");
+     }
+    break;
+   default:
+      System.out.println("Invalid choice.Please enter either 1 or 2");
+   }
+sc.close();
+  }
+}
+   
