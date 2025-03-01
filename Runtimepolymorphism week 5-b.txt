@@ -1,0 +1,42 @@
+class Payment
+{
+   void payment1()
+   {
+     System.out.println("Processing payment");
+   }
+}
+class Creditcard extends Payment
+{
+  void payment1()
+  {
+    super.payment1();
+    System.out.println("Processing credit card payment");
+  }
+}
+class Debitcard extends Payment
+{
+  void payment1()
+  {
+    System.out.println("Processing debit card payment");
+  }
+}
+class netbanking extends Payment
+{
+  void payment1()
+  {
+    System.out.println("Payment done using netbanking");
+  }
+}
+class Runtime
+{
+ public static void main(String[] args)
+ {
+    Payment payment2=new Creditcard();
+    Payment payment3=new Debitcard();
+    Payment payment4=new netbanking();
+    payment2.payment1();
+    payment3.payment1();
+    payment4.payment1();
+ }
+}
+   
