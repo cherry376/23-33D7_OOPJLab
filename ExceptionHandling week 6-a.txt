@@ -1,0 +1,21 @@
+
+class ExceptionHandlingEx
+{
+ public static void main(String[] args)
+ {
+  try
+  {
+    int a=12,b=5,c=5;
+    int d=a/(b-c);
+    System.out.println("Error can occur at"+d);
+    
+  }
+  catch(ArithmeticException e)
+  {
+    System.out.println("ArithmeticException Caught:"+e.getMessage());
+  }
+  finally
+  {
+    System.out.println("This will execute whether exception handled or not")
+ }
+}

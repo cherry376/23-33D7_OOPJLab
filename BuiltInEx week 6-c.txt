@@ -1,0 +1,43 @@
+class BuiltInEx
+{
+  public static void main(String[] args)
+  {
+    try
+    {
+      int b=15/0;
+      System.out.println(b);
+    }
+    catch(ArithmeticException e)
+    {
+      System.out.println("Error:ArithmeticException found");
+    }
+    try
+    {
+      int[] arr={15,20,12,10};
+      System.out.println(arr[6]);
+    }
+    catch(ArrayIndexOutOfBoundsException e)
+    {  
+      System.out.println("Error:Array Index out of Bounds Exception is found");
+    }
+   try
+   {
+     String str="hello";
+     int a=Integer.parseInt(str);
+   }
+   catch(NumberFormatException e)
+   {
+     System.out.println("NumberFormatException is found");
+   }
+  try
+   {
+     String a=null;
+     System.out.println(a.length());
+   }
+  catch(NullPointerException e)
+  {
+    System.out.println("NullPointerException is found");
+  }
+  System.out.println("Program is finally executed");
+ }
+}
